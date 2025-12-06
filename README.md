@@ -23,6 +23,7 @@ Live Demo: **https://xyz-pizza.onrender.com**
 - Redux Toolkit
 - React Router DOM (v6.4)
 - useNavigation
+- Tailwind
 - ESLint
 - JavaScript (ES6+)
 
