@@ -53,8 +53,8 @@ const onSubmit = async (data) => {
     position: position.latitude && position.longitude ? `${position.latitude},${position.longitude}` : '',
     cart: cart.map(item => ({
       pizzaId: item.pizzaId,
-      name: item.name,  // اضافه کردن اگر در cart موجود باشه
-      quantity: item.quantity || item.amount,  // استانداردسازی quantity
+      name: item.name,  
+      quantity: item.quantity || item.amount,  
       unitPrice: item.unitPrice,
       totalPrice: item.totalPrice,
     })),
