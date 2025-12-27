@@ -1,14 +1,9 @@
-// Test ID: IIDSAT
 import { useFetcher, useLoaderData } from 'react-router-dom';
 
 import OrderItem from './OrderItem';
 
 import { getOrder } from '../../services/apiRestaurant';
-import {
-  calcMinutesLeft,
-  formatCurrency,
-  formatDate,
-} from '../../utils/helpers';
+import { calcMinutesLeft,formatCurrency,formatDate,} from '../../utils/helpers';
 import { useEffect } from 'react';
 import UpdateOrder from './UpdateOrder';
 
@@ -17,13 +12,14 @@ function Order() {
   const fetcher = useFetcher();
 
   useEffect(
+
     function () {
       if (!fetcher.data && fetcher.state === 'idle') fetcher.load('/menu');
     },
     [fetcher]
   );
 
-  // میتونی سرچ کنی آیدی اردر رو و اررد رو بیاره
+
   const {
     id,
     status,
@@ -34,7 +30,11 @@ function Order() {
     cart,
   } = order;
 
+
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
+
+
+
 
   return (
     <div className="space-y-8 px-4 py-6">
@@ -56,11 +56,14 @@ function Order() {
       <div className="flex flex-wrap items-center justify-between gap-2 bg-stone-200 px-6 py-5">
         <p className="font-medium">
           {deliveryIn >= 0
+
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left`
+
             : 'Order should have arrived'}
         </p>
         <p className="text-xs text-stone-500">
-          (Estimated delivery: {formatDate(estimatedDelivery)})
+
+              (Estimated delivery: {formatDate(estimatedDelivery)})
         </p>
       </div>
 
@@ -69,7 +72,7 @@ function Order() {
           <OrderItem
             item={item}
             key={item.pizzaId}
-            isLoadingIngredients={fetcher.state === 'loading'}
+             isLoadingIngredients={fetcher.state === 'loading'}
             ingredients={
               fetcher?.data?.find((el) => el.id === item.pizzaId)
                 ?.ingredients ?? []
