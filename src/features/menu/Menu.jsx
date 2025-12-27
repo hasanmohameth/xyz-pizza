@@ -9,7 +9,7 @@ export async function loader() {
 }
 
 function Menu() {
-  const menu = useLoaderData(); // برای اینکه صفحه و عکس های منو کامل لود شد بعدش نمایش داده بشه کامپوننت 
+  const menu = useLoaderData(); 
 
   console.log(menu);
 
