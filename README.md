@@ -24,7 +24,7 @@ Live Demo: **https://xyz-pizza.onrender.com**
 - React Router DOM (v6.4)
 - useNavigation
 - React Hook Form
-- Tailwind
+- CSS Tailwind
 - ESLint
 - JavaScript (ES6+)
 
